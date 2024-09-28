@@ -1,0 +1,5 @@
+const InitialValueInput = () => {
+    return(
+        <input/>
+    )
+}

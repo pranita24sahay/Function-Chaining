@@ -1,0 +1,131 @@
+.app {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.input-section, .output-section {
+    margin-bottom: 20px;
+}
+
+.function-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.initial-value input {
+    width: 60px;
+
+}
+.initial-value {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.output-value {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.initial-value .label {
+    background-color: #E29A2D;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+    padding: 8px 12px;
+}
+.output-value .label {
+    background: #4CAF79;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+    padding: 8px 12px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E29A2D;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+    width: 120px;
+}
+.output-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #2DD179;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+    width: 120px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 60px;
+    text-align: center;
+}
+
+.input-container .divider {
+    height: 60%;
+    width: 1px;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+}
+
+.input-container .indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #4682f3;
+    border: 3px solid #cccccc;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+}
+
+.input-container::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #4682f3;
+}
+
+.final-output {
+    font-size: 1.5em;
+}
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows interactions to pass through to other elements */
+    z-index: 2; /* Adjust to ensure it's visible behind the elements */
+}
